@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "k9sjihf5rtlh5b48pk",
+    "createdAt": "2026-06-12T12:48:45.745Z",
+    "updatedAt": "2026-06-12T12:48:45.749Z",
+    "name": "Karthikeya Gurram",
+    "email": "karthikeyanetha7@gmail.com",
+    "password": "$2a$10$7jh8TAOwf/JVQ2tdb/g4KeZavSU47NDMqewyXoHD39Kr6rv8x.bAS",
+    "role": "admin",
+    "profileImage": "/uploads/avatar-admin.png"
+  },
+  {
+    "_id": "sef5t78qvrwiqpjr0u",
+    "createdAt": "2026-06-12T12:48:46.278Z",
+    "updatedAt": "2026-06-12T12:48:46.278Z",
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "password": "$2a$10$iiH7Hsg/KaQRNDZ4vqUwa.MWbfYocO1DqlmHJ6UwljIKERQYXHsAe",
+    "role": "user",
+    "profileImage": "/uploads/avatar-user.png"
+  }
+]
