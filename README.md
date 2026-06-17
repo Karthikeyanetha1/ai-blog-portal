@@ -40,7 +40,7 @@ Created specifically for **Gurram Karthikeya** (AI/ML Engineer & Full Stack Deve
 
 ### Step 1: Clone and Navigate
 Place the files in your desired workspace folder, for example:
-`C:\Users\KARTHIK NETHA\.gemini\antigravity\scratch\ai-blog-portal`
+`C:\Users\KARTHIK NETHA\Desktop\ai-blog-portal`
 
 ### Step 2: Configure and Start the Backend
 1. Open a terminal and navigate to the backend folder:
@@ -51,19 +51,16 @@ Place the files in your desired workspace folder, for example:
    ```bash
    npm install
    ```
-3. Verify the environmental settings in `.env`:
-   ```env
-   PORT=5000
-   MONGO_URI=mongodb://127.0.0.1:27017/ai-blog
-   JWT_SECRET=karthikeya_ai_ml_blog_secret_key_2026
-   JWT_EXPIRES_IN=7d
-   NODE_ENV=development
-   ```
-4. Start the backend developer server:
-   ```bash
-   npm run dev
-   ```
-   *(Note: On initial start, the DB connection will automatically download Unsplash images and seed users, blogs, and comments if the database collections are empty).*
+3. Start the backend developer server:
+   * **On Windows (PowerShell/CMD)**:
+     ```powershell
+     npm.cmd run dev
+     ```
+   * **On Mac/Linux**:
+     ```bash
+     npm run dev
+     ```
+   *(Note: The server will attempt to connect to MongoDB. If MongoDB is not running locally, it will automatically fallback to the local JSON-based mock database in `backend/data/` so the site runs fully with all seed data without needing any setup!)*
 
 ---
 
@@ -77,10 +74,28 @@ Place the files in your desired workspace folder, for example:
    npm install
    ```
 3. Start the Vite developer server:
-   ```bash
-   npm run dev
-   ```
+   * **On Windows (PowerShell/CMD)**:
+     ```powershell
+     npm.cmd run dev
+     ```
+   * **On Mac/Linux**:
+     ```bash
+     npm run dev
+     ```
 4. Open the application in your browser at: `http://localhost:5173`
+
+---
+
+### ⚠️ Troubleshooting Port Conflicts
+If you see an error like `EADDRINUSE` (port already in use) for port `5000` or `5173`, it means a previous Node/Vite process is still running in the background.
+* **On Windows (PowerShell)**, you can find and terminate these processes easily by running:
+  ```powershell
+  # Kill process using port 5000 (Backend)
+  Stop-Process -Id (Get-NetTCPConnection -LocalPort 5000).OwningProcess -Force
+  
+  # Kill process using port 5173 (Frontend)
+  Stop-Process -Id (Get-NetTCPConnection -LocalPort 5173).OwningProcess -Force
+  ```
 
 ---
 
@@ -88,8 +103,8 @@ Place the files in your desired workspace folder, for example:
 
 Use these credentials to log in and test features:
 
-### 1. Admin Account (Gurram Karthikeya)
-- **Email**: `karthik@example.com`
+### 1. Admin Account (Karthikeya Gurram)
+- **Email**: `karthikeyanetha7@gmail.com`
 - **Password**: `password123`
 - *Access*: Can read, like, post comments, and access the **Admin Dashboard** to write articles, edit existing posts, and delete comments.
 
