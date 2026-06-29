@@ -134,8 +134,8 @@ const Contact: React.FC = () => {
             {/* Resume button */}
             <div className="pt-4 border-t border-slate-200/50 dark:border-slate-800/50">
               <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); alert('Resume download is simulated! Placeholder active.'); }}
+                href="/karthikeya_gurram_resume.pdf"
+                download="Karthikeya_Gurram_Resume.pdf"
                 className="w-full rounded-full bg-slate-950 dark:bg-white text-white dark:text-black hover:bg-cyber-cyan dark:hover:bg-cyber-cyan dark:hover:text-white py-3 text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-md"
               >
                 <FileText className="h-4 w-4" />

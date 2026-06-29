@@ -21,7 +21,12 @@ const FloatingContact: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleDownloadCV = () => {
-    alert('Resume download is simulated! Placeholder active.');
+    const link = document.createElement('a');
+    link.href = '/karthikeya_gurram_resume.pdf';
+    link.download = 'Karthikeya_Gurram_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

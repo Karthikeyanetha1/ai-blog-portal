@@ -59,7 +59,12 @@ const About: React.FC = () => {
   ];
 
   const handleDownloadCV = () => {
-    alert('Resume download is simulated! Placeholder active.');
+    const link = document.createElement('a');
+    link.href = '/karthikeya_gurram_resume.pdf';
+    link.download = 'Karthikeya_Gurram_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
